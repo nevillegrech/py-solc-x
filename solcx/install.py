@@ -105,7 +105,7 @@ def get_executable(version=None):
             "Solc is not installed. Call solcx.get_available_solc_versions()"
             " to view for available versions and solcx.install_solc() to install."
         )
-    solc_bin = get_solc_folder().joinpath("solc-" + version)
+    solc_bin = get_solc_folder().joinpath("solc-v" + version)
     if sys.platform == "win32":
         solc_bin = solc_bin.joinpath("solc.exe")
     if not solc_bin.exists():
